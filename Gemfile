@@ -33,12 +33,22 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# font-end
+gem 'font-awesome-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.5'
+
+  # for better display
+  gem 'awesome_print', git: 'https://github.com/awesome-print/awesome_print.git', branch: 'master'
+
+  # for better debug
+  gem 'pry'
 end
 
 group :development do

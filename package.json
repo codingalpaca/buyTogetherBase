@@ -1,5 +1,8 @@
 {
   "name": "buyTogetherBase",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.4.2",
+    "jquery": "^3.2.1"
+  }
 }
