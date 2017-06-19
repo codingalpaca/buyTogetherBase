@@ -1,24 +1,39 @@
-# README
+# Coding Alpaca 合購專案
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 如何使用？
 
-Things you may want to cover:
+在 terminal 輸入複製專案：
 
-* Ruby version
+```
+git clone https://github.com/codingalpaca/buyTogetherBase.git
+```
 
-* System dependencies
+進入專案：
 
-* Configuration
+```
+cd buyTogetherBase
+```
 
-* Database creation
+安裝所需的 gem：
 
-* Database initialization
+```
+bundle install
+```
 
-* How to run the test suite
+安裝前端套件：
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+yarn install
+```
 
-* Deployment instructions
+開啟伺服器：
 
-* ...
+```
+rails server
+```
+
+如果你是在 C9 記得使用：
+
+```
+rails server -b $IP -p $PORT
+```
