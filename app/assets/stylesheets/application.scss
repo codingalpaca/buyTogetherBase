@@ -1,0 +1,16 @@
+// settings
+$primary: #F6A634;
+$background: #FAFAFA;
+
+$family-primary: 'Noto Sans TC', sans-serif;
+
+// font
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+// libraries
+@import "font-awesome";
+@import "bulma/bulma";
+
+// custom
+@import "general";
+@import "stores";

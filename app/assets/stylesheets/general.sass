@@ -1,0 +1,92 @@
+// mixins
+=narrowed-container
+  .container
+    +desktop
+      max-width: $desktop - 300px
+      width: $desktop - 300px
+    +widescreen
+      max-width: $widescreen - 300px
+      width: $widescreen - 300px
+    +fullhd
+      max-width: $fullhd - 300px
+      width: $fullhd - 300px
+
+.section
+  background-color: $background
+  +narrowed-container
+
+body
+  position: relative
+  min-height: 100vh
+  background-color: $background
+  padding-bottom: 256px
+
+// footer
+footer.footer
+  background-color: $primary
+  color: white
+  padding-bottom: 3rem
+  position: absolute
+  right: 0
+  bottom: 0
+  left: 0
+
+  +narrowed-container
+
+  .footer-list
+    li:first-child
+      font-weight: bold
+      margin-bottom: 1rem
+
+    li:not(:first-child)
+      cursor: pointer
+
+  .footer-title
+    font-weight: bold
+    font-size: 1.5rem
+    letter-spacing: -1px
+    font-family: cursive
+
+// text
+.title
+  color: $primary
+  font-weight: 500
+
+// form
+.label
+  color: $primary
+
+.nested-fields:not(:last-child)
+  margin-bottom: .75rem
+
+// image
+figure.image img
+  object-fit: cover
+
+// other
+.button
+  &.is-edit
+    position: absolute
+    top: .5rem
+    right: .5rem
+
+.arrow
+  display: block
+  position: absolute
+  z-index: 1
+  width: 20px
+  height: 20px
+  background-repeat: no-repeat
+  background-color: $primary
+  background-size: 20px 20px
+  border-radius: 50%
+  top: calc(50% - 10px)
+  cursor: pointer
+
+  &.is-left
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAABBCAYAAACO98lFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAbdJREFUeNrsmcFtwjAUhlPoAIyAcuLYblCkDBAmACZoOwIToE4A197aeySyAUyQ0g1y5Njn6h0sy5T24Pdezf9JViBGSvLl2fkdigIAAAAAAAAAAAAA/JkbqydWVdWGNgv+umyaZpvqWLcGL35EGyeg9nbPqV2HBBawo3YnedzBPxDQU3vOXgIJcBe+PyNgSvPBIeuJkQW4ChgFXQcW0Gf9dLAgQHU4kIAFD4FQQCspQK0SWMAm0rWli19Kn89AQcCTJQHiEjgFriNdKy0BosMhiME+SSOxCQlnYrAZAcklXEiBMxLQWghrqdcOO60UaGlijC2EZpYESEiIBZ41D5OrkTCNiHDV8cGROX8JXPb3vBbw+Z4wrYhIHpZIxJErIiZizxFalaHEQbquO5Vl+UofJ9x8aur7pN+oTZbiC6gfkqPa2mEofUC64+905538h3DCpP1j1599JfxiOd1yluizl8Aiahah+mbJ8jvGo1S6VH/bzBcZe4SOpbKEmb/hLqw43ZL7LdtK8Cqi54poI6HqMevhEIqg5kSIvmgxJcGT4ULTyhsOLwUAAAAAAAAAAAAAsMWXAAMAWXqjBdJctpQAAAAASUVORK5CYII=)
+    left: calc(50% - 35px)
+
+  &.is-right
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAABBCAYAAACO98lFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAaJJREFUeNrsmc9pwzAUh620A2SE4Ak8Qgo+5OhsEE8QukEzQbtBs0GTuyE+9ugJ3GSDdIM+lVdwhRzTgqSH9PtAmFgQoc8W74+zDAAAAAAAAAAAAAD8GeXyz8uy3NDllX/um6apU5RwostycOtAoyYZV0kSZp7Xq2icSM48JQmPNMynXkgToVwvQJv93jQNc9NnGms6Gl30EljEnEUUxpR+Sx5Ci1C+FpIsQvlcjEW8GRHjBx019tFLGMjQucNGioi7EBL6vj/meb6wHI2K7n/S/Hv0EgYilOVorLQgPR+9BBbR0oYvnET9yiV8ilCZAIwaI/OdZouQwCKWHDnMpKrjEOpMxEyKBNpkqzc7lmbHVEBNidBPfW2ZKpKRwMnUs2XqmoQELrQ+xtLqFKLDWKXZcaV5jlrCjfDoPCqIkBA6Pwgu4UYR5b0hK62K3JGAJ/QTYu4nTHSWtIBDqKPpq8dY8BuwsOUA0fcYJ3KAOvpuMwmoOAR6rwwlpc1bi4BWkgDNvef1RH6Udf0m7AYV4IvUr9IAAAAAAAAAAAAA4B98CTAAp8Cl7ugpPtYAAAAASUVORK5CYII=)
+    right: calc(50% - 35px)

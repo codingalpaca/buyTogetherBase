@@ -1,0 +1,96 @@
+// new, edit
+section.store-form-section
+  button.button,
+  input[type="submit"].button
+    border-radius: 0
+
+// index
+section.store-section
+  padding: 1.5rem
+
+  .card.has-store
+    display: flex
+
+    .store-info
+      flex: none
+      width: 40%
+
+      .card-content
+        position: relative
+
+    .store-menu
+      flex: none
+      width: 60%
+
+    progress
+      flex: none
+      width: (9 / 12) * 100%
+      margin: .75rem
+      display: block
+
+      & + .subtitle
+        flex: none
+        width: (3 / 12) * 100%
+        font-size: .75rem
+        padding: .75rem
+        display: block
+
+  .card-content
+    padding: 1rem
+
+    &.has-border-right
+      border-right: 1px solid #B7B7B7
+
+    .subtitle
+      font-size: .75rem
+
+    .content.has-description
+      min-height: 48px
+      height: 48px
+
+    .content.has-address
+      margin-bottom: 8px
+
+  .titlebar
+    height: 30px
+    background-color: $primary
+    color: white
+    font-weight: bold
+    line-height: 30px
+
+// show
+section.store-image-section
+  padding: 1.5rem
+
+  figure.image
+    img.store-picture
+      width: 100%
+      height: 445px
+      object-fit: cover
+
+    .card
+      position: absolute
+      width: 360px
+      left: 32px
+      bottom: 32px
+      border: solid 1px #B7B7B7
+
+section.items-section
+  padding: 0 1.5rem 1.5rem 1.5rem
+
+  .card-footer
+    position: relative
+
+    .title
+      margin-bottom: 0
+
+  button.button,
+  input[type="submit"].button
+    border-radius: 0
+
+  .field.has-remove-button
+    line-height: 36px
+
+    a
+      color: $danger
+
